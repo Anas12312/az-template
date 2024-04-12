@@ -22,12 +22,14 @@
   "scripts": {
     "build": "babel src -d lib"
   },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
   "author": "AZ",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.4",
-    "@babel/preset-env": "^7.24.4",
-    "prompts": "^2.4.2"
+    "@babel/preset-env": "^7.24.4"
   }
 }
