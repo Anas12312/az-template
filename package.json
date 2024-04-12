@@ -1,6 +1,6 @@
 {
   "name": "az-template",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "template for react applications with tailwindcss",
   "main": "index.js",
   "type": "module",

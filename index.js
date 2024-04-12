@@ -59,14 +59,15 @@ const renamePackageJsonName = async (targetDir, projectName) => {
             message: "Enter your project name",
             initial: "my-project",
             format: val => val.toLowerCase().split(" ").join("-"),
-            validate: val => projectNamePattern.test(val) ? true : "Project name should not contain special characters except hyphen (-)"
+            validate: (val) => true
+            // validate: val => projectNamePattern.test(val) ? true : "Project name should not contain special characters except hyphen (-)"
         }]);
         const {
             projectName,
             template
         } = response;
-        const targetDir = path.join(cwd, projectName);
-        const sourceDir = path.resolve(fileURLToPath(import.meta.url), "../../templates", `${template}`);
+        const targetDir = path.join(process.cwd(), projectName);
+        const sourceDir = path.resolve(fileURLToPath(import.meta.url), "../templates", `${template}`);
         if (!fs.existsSync(targetDir)) {
             // Copying logic
             console.log("Target directory doesn't exist");
@@ -84,6 +85,6 @@ const renamePackageJsonName = async (targetDir, projectName) => {
             throw new Error("Target directory already exist!");
         }
     } catch (err) {
-        console.log(err.message);
+        console.log(err);
     }
 })();
