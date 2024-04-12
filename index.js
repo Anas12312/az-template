@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "fs";
 import { writeFile, lstat, readdir, mkdir, copyFile, readFile } from "fs/promises";
+import { title } from "node:process";
 const templates = [{
     value: "react-js",
     title: "React + TailwindCSS (JS)",
@@ -16,6 +17,10 @@ const templates = [{
     value: "vanilla-js",
     title: "Vanilla + TailwindCSS (JS)",
     description: "Full JavaScript Vanilla App with TailwindCSS Configured"
+}, {
+    value: "node-ts",
+    title: "Node.js + TypeScript + Postgres",
+    description: "Full Template for Nodejs with Typescript using Express and PostgreSQL"
 }];
 const copyFilesAndDirectories = async (source, destination) => {
     const entries = await readdir(source);
