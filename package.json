@@ -1,0 +1,29 @@
+{
+  "name": "az-template",
+  "version": "1.0.2",
+  "description": "template for react applications with tailwindcss",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-az": "index.js",
+    "ctpl": "index.js"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "files": [
+    "index.js",
+    "templates/*"
+  ],
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "prompts": "^2.4.2"
+  }
+}
