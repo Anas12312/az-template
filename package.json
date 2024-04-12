@@ -1,6 +1,6 @@
 {
   "name": "az-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "template for react applications with tailwindcss",
   "main": "index.js",
   "type": "module",
@@ -15,10 +15,14 @@
     "index.js",
     "templates/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anas12312/az-template.git"
+  },
   "scripts": {
     "build": "babel src -d lib"
   },
-  "author": "",
+  "author": "AZ",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.24.1",
